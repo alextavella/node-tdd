@@ -1,0 +1,31 @@
+{
+  "name": "node-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "lab -r console --verbose --assert code"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alextavella/node-tdd.git"
+  },
+  "author": "alextavella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alextavella/node-tdd/issues"
+  },
+  "homepage": "https://github.com/alextavella/node-tdd#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "code": "^4.0.0",
+    "lab": "^11.2.2",
+    "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "hapi": "^16.1.0"
+  }
+}
