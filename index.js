@@ -15,7 +15,7 @@ server.route({
     path: '/',
     method: 'POST',
     handler: (request, reply) => {
-        if (request.payload) reply(`Olá ${request.payload.name}!`)
+        if (request.payload) return reply(`Olá ${request.payload.name}!`)
         reply().code(500);
     }
 })

@@ -27,7 +27,7 @@ lab.experiment('POST /', () => {
     }))
 })
 
-lab.experiment('POST /', () => {
+lab.experiment('POST /fail', () => {
     lab.test('nao deve cadastrar usuario', co.wrap(function* () {
         let res = yield server.inject({ url: '/', method: 'POST', payload: null })
 
