@@ -1,7 +1,7 @@
 'use strict'
 
-let Hapi = require('hapi')
-let server = module.exports = new Hapi.Server()
+const Hapi = require('hapi')
+const server = module.exports = new Hapi.Server()
 
 server.connection({ port: 8080 })
 
@@ -21,6 +21,6 @@ server.route({
 })
 
 server.start((err) => {
-    if (err) throw err;
+    // if (err) throw err;
     console.log('Server running at:', server.info.uri);
 })

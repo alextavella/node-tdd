@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "lab -r console --verbose --assert code"
+    "test": "lab -r console -o stdout -r html -o report/coverage.html --verbose --assert code",
+    "test-cov-html": "lab -r html -o coverage.html"
   },
   "repository": {
     "type": "git",
