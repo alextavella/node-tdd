@@ -14,7 +14,13 @@ server.route({
 server.route({
     path: '/',
     method: 'POST',
-    handler: (request, reply) => reply(`Olá ${request.payload.name}!`)
+    handler: (request, reply) => {
+        if (request.payload) reply(`Olá ${request.payload.name}!`)
+        reply().code(500);
+    }
 })
 
-server.start()
+server.start((err) => {
+    if (err) throw err;
+    console.log('Server running at:', server.info.uri);
+})
